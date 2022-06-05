@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            padding: 20px;
+        }
+
+        .grid-container{
+            border: 5px solid black;
+            font-family: avenir, sans-serif;
+            font-weight: 800;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+           
+        }
+
+        .grid-item{
+            padding: 10px 20px;
+            
+        }
+        .grid-item:nth-child(1){
+            background: darkcyan;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .grid-item:nth-child(2){
+            background: turquoise;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .grid-item:nth-child(3){
+            background: aquamarine;
+        }
+        .grid-item:nth-child(4){
+            background: lightgreen;
+        }
+       
+    </style>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+       
+    </div>
+</body>
+</html>
