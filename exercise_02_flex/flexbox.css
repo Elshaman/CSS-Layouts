@@ -1,0 +1,66 @@
+/* 
+Keyword colors can be found at http://colours.neilorangepeel.com/
+*/
+
+/* border-box fix */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+
+/* Add padding to all of the .container child elements */
+.container > * {
+  padding: 20px;
+}
+.container {
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+
+  /* 1. ESTABLECER EL CONTENEDOR FLEX Y WRAP PARA QUE TODOS QUEPAN EN EL CONTENEDOR*/
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background: skyblue;
+  /* 2. establecer header y footer  */
+  flex: 1 0 100%;
+  /* 3. establecer orden de aparicion*/
+  order:1;
+}
+main {
+  background: slategray;
+  flex: 1 1 500px;
+  order: 3;
+}
+nav {
+  background: cadetblue;
+  /* 4. establecer acho al espacio dispoible */
+  flex: 1 0 200px;
+  order:2
+}
+aside {
+  background: seagreen;
+  order:4;
+  flex: 1 0 200px;
+}
+footer {
+  background: darkslateblue;
+  flex: 1 0 100%;
+  order: 5;
+}
+
+
+

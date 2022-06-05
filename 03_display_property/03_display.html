@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+
+        }
+        div{
+            background: lightcyan;
+            height: 100px;
+            width: 200px;
+            /* esto modifica el comportamiento block del div  */
+            /* pasa a ser inline*/
+            display: inline;
+        }
+        span{
+            background: lightgreen;
+            /*los elementos inline ignoran width y heigth*/
+            height: 100px;
+            /* esto modifica el comportamiento inline del span  */
+            /* pasa a ser block*/
+            display: block;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div>Bloque</div>
+        <div>Bloque</div>
+        <span>inline </span>
+        <span>inline </span>
+    </section>
+</body>
+</html>

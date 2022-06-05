@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .flex-container{
+            font-family: avenir, sans-serif;
+            border: 4px solid black;
+            margin: 40px 30px;
+            /* width: 600px; */
+            /* 3. disminuimos el valor del ancho a 400px*/
+            /* 6. volver a disminuir el valor del ancho a 400px para probar shrink*/
+            width: 400px; 
+            /* 9, en caso de direccionamiento en columnas, se debe establecer altura para ser aplicado por grow y shrink*/
+            height: 300px;
+            /*1. incorporamos flex*/ 
+            display: flex;
+            /*7. incorporamos wrap, para que , pese a no haber shrink, de todas maneras todos quepan en el container */
+            flex-wrap: wrap;
+            /*8. cambiamos el eje a vertical */
+            flex-direction: column;
+        }
+
+        section > div {
+            text-align: center;
+  
+            /*2. grow shrink basis*/
+            /* los valores por defecto no deben producir cambios */
+            /* flex: 0 1 auto; */
+            /* 3. cambiamos valor del parametro basis a 100 px */
+            /* 4. cambiamos el valor de flex-grow a 1, asi los elementos CRECEN 1 vez 
+            para ajustarse al contenedor */
+            /* 5. ponemos el valor de shrink a 0 para que no ajuste al minimizar*/
+            flex: 1 0 100px;  
+        }
+
+        div:nth-of-type(1){
+            background: red;
+        }
+        div:nth-of-type(2){
+            background: orange;
+        }
+        div:nth-of-type(3){
+            background: yellow;
+        }
+        div:nth-of-type(4){
+            background: yellowgreen;
+        }
+        div:nth-of-type(5){
+            background: lightblue;
+        }
+        div:nth-of-type(6){
+            background: mediumpurple;
+        }
+      
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </section>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* 
+Keyword colors can be found at http://colours.neilorangepeel.com/
+*/
+
+/* border-box fix */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+
+/* Add padding to all of the .container child elements */
+.container > * {
+  padding: 20px;
+}
+.container {
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  /* 12. tamaño maximo de 1000 */
+  max-width: 1000px;
+  /*y entonces dejar centrado */
+  margin: 0 auto;
+}
+
+header {
+  background: skyblue;
+}
+main {
+  background: slategray;
+}
+nav {
+  background: cadetblue;
+}
+aside {
+  background: seagreen;
+}
+footer {
+  background: darkslateblue;
+}
+
+/*1.Agregar la media query de 600 px */
+@media (min-width: 600px) {
+  /* 2.agregar regla de estilo para la nav */
+  nav{
+    /* se van a hacer 2 columnas */
+    /* 3. la nav con ancho de 25% */ 
+    width: 25%;
+    /* 5. left para que quede flotando a la izquierde */
+    float:left;
+  }
+  main{
+    /* 4. la main con ancho de 75% restante */ 
+    width: 75%;
+     /* 5. left para que quede flotando a la izquierde */
+    float:left;
+  }
+  aside{
+    /* 6. quedan parejas las columnas */
+    clear:both;
+  }
+}
+/* 7. crear la media query para 3 columnas */
+@media (min-width: 850px) {
+
+  /* 8.main de 50% */
+  main{
+    width: 50%;
+    /*float:left;*/
+  }
+  aside{
+    /*9. aside a 25%   */
+    width: 25%;
+    /*10. quitar el clear para que no quede debajo */
+    clear:none;
+    /*11. alinearlo a la izquierda */
+    float:right;
+  }
+  footer{
+    /*12. alinear footer abajo */
+    clear:both;
+  }
+}
+
+
